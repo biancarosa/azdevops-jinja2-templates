@@ -5,6 +5,14 @@
   "version": "0.1.0",
   "publisher": "biancarosa",
   "public": true,
+  "content": {
+    "details": {
+      "path": "README.md"
+    },
+    "license": {
+      "path": "LICENSE.txt"
+    }
+  },
   "targets": [
     {
       "id": "Microsoft.VisualStudio.Services"
