@@ -1,7 +1,7 @@
 {
   "$schema": "https://raw.githubusercontent.com/Microsoft/azure-pipelines-task-lib/master/tasks.schema.json",
   "id": "fcc4d8a1-cbc0-4041-baf9-7d8dd2f07d10",
-  "name": "Render Jinja2 Template",
+  "name": "render-jinja2-template",
   "friendlyName": "Render Jinja2 Template",
   "description": "Renders jinja2 templates with environment variables",
   "helpMarkDown": "",
@@ -9,7 +9,7 @@
   "author": "Bianca Rosa",
   "version": {
     "Major": 0,
-    "Minor": 8,
+    "Minor": 1,
     "Patch": 0
   },
   "instanceNameFormat": "Render Jinja2 Template in $(targetFile)",
@@ -17,7 +17,7 @@
     {
       "name": "file",
       "type": "string",
-      "label": "Target files",
+      "label": "Target file",
       "defaultValue": "file.tmpl",
       "required": true
     }
