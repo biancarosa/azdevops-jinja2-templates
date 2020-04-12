@@ -1,0 +1,32 @@
+{
+  "manifestVersion": 1,
+  "id": "render-jinja2-template-task",
+  "name": "Render Jinja2 Template Task",
+  "version": "0.0.3",
+  "publisher": "biancarosa",
+  "targets": [
+    {
+      "id": "Microsoft.VisualStudio.Services"
+    }
+  ],
+  "description": "Renders Jinja2 Templates",
+  "categories": ["Azure Pipelines"],
+  "icons": {
+    "default": "images/extension-icon.png"
+  },
+  "files": [
+    {
+      "path": "task"
+    }
+  ],
+  "contributions": [
+    {
+      "id": "custom-render-jinja2-template-task",
+      "type": "ms.vss-distributed-task.task",
+      "targets": ["ms.vss-distributed-task.tasks"],
+      "properties": {
+        "name": "task"
+      }
+    }
+  ]
+}
