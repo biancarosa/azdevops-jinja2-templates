@@ -39,19 +39,32 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var tl = require("azure-pipelines-task-lib/task");
 function run() {
     return __awaiter(this, void 0, void 0, function () {
-        var file, bash;
+        var err_1;
         return __generator(this, function (_a) {
-            try {
-                file = tl.getPathInput("file", true);
-                console.log(file);
-                bash = tl.tool(tl.which("bash", true));
-                bash.arg("pip install envtpl");
-                bash.arg("envtpl " + file);
+            switch (_a.label) {
+                case 0:
+                    _a.trys.push([0, 3, , 4]);
+                    console.log("EXECUTING COMMANDS");
+                    return [4 /*yield*/, tl
+                            .tool(tl.which("pip"))
+                            .arg(["install", "envtpl"])
+                            .exec()];
+                case 1:
+                    _a.sent();
+                    return [4 /*yield*/, tl
+                            .tool(tl.which("bash"))
+                            .arg(["envtpl", tl.getInput("file", true) || ""])
+                            .exec()];
+                case 2:
+                    _a.sent();
+                    console.log("rendered");
+                    return [3 /*break*/, 4];
+                case 3:
+                    err_1 = _a.sent();
+                    tl.setResult(tl.TaskResult.Failed, err_1.message);
+                    return [3 /*break*/, 4];
+                case 4: return [2 /*return*/];
             }
-            catch (err) {
-                tl.setResult(tl.TaskResult.Failed, err.message);
-            }
-            return [2 /*return*/];
         });
     });
 }
