@@ -1,0 +1,25 @@
+# This is a basic workflow to help you get started with Actions
+
+name: AzDevOps-Jinja2-Templates-CI
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Install
+      run: make install
+
+    - name: Compile
+      run: make compile
+      
+    - name: Test
+      run: make test
