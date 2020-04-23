@@ -14,11 +14,14 @@ describe("Sample task tests", function () {
     let tr: ttm.MockTestRunner = new ttm.MockTestRunner(tp);
 
     tr.run();
-    console.log(tr.succeeded);
     assert.equal(tr.succeeded, false, "should have failed");
+    console.log("succeeded :: ", tr.succeeded);
     assert.equal(tr.warningIssues, 0, "should have no warnings");
+    console.log("warningIssues :: ", tr.succeeded);
     assert.equal(tr.errorIssues.length, 1, "should have 1 error issue");
+    console.log("errorIssues :: ", tr.errorIssues.length);
     assert.equal(tr.errorIssues[0], "Input required: file");
+    console.log("errorIssues[0] :: ", tr.errorIssues[0]);
 
     done();
   });
