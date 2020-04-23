@@ -5,6 +5,4 @@ import path = require("path");
 let taskPath = path.join(__dirname, "..", "index.js");
 let tmr: tmrm.TaskMockRunner = new tmrm.TaskMockRunner(taskPath);
 
-console.log("Running failure test...");
 tmr.run();
-console.log("Finished running failure test.");
