@@ -4,22 +4,28 @@ name: AzDevOps-Jinja2-Templates-CI
 
 on:
   push:
-    branches: [ master ]
+    branches: [master]
   pull_request:
-    branches: [ master ]
+    branches: [master]
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
+    env:
+      TASK_TEST_TRACE: 1
+
     steps:
-    - uses: actions/checkout@v2
+      - uses: actions/checkout@v2
 
-    - name: Install
-      run: make install
+      - name: Install
+        run: npm Install
+        working-directory: task
 
-    - name: Compile
-      run: make compile
-      
-    - name: Test
-      run: make test
+      - name: Compile
+        run: tsc
+        working-directory: task
+
+      - name: Test
+        run: npm test
+        working-directory: task
