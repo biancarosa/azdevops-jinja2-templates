@@ -19,7 +19,7 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Install
-        run: npm Install
+        run: npm install
         working-directory: task
 
       - name: Compile
