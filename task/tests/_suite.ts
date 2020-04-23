@@ -23,7 +23,7 @@ describe("Sample task tests", function () {
     assert.equal(tr.errorIssues[0], "Input required: file");
     console.log("errorIssues[0] :: ", tr.errorIssues[0]);
 
-    done();
+    return done();
   });
   // it("should succeed with simple inputs", function (done: MochaDone) {
   //   this.timeout(1000);
