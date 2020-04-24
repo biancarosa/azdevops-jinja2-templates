@@ -2,7 +2,7 @@
   "manifestVersion": 1,
   "id": "render-jinja2-template-task",
   "name": "Render Jinja2 Template Task",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "publisher": "biancarosa",
   "public": true,
   "content": {
