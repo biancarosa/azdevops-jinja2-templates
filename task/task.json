@@ -20,6 +20,13 @@
       "label": "Target file",
       "defaultValue": "file.tmpl",
       "required": true
+    },
+    {
+      "name": "allowMissing",
+      "type": "boolean",
+      "label": "Allow missing variables",
+      "defaultValue": false,
+      "required": false
     }
   ],
   "execution": {
