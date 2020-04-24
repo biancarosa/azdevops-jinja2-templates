@@ -38,4 +38,21 @@ describe("Sample task tests", function () {
     );
     done();
   });
+  it("should succeed with allow missing", function (done: MochaDone) {
+    this.timeout(1000);
+
+    let tp = path.join(__dirname, "allowMissing.js");
+    let tr: ttm.MockTestRunner = new ttm.MockTestRunner(tp);
+
+    tr.run();
+    assert.equal(tr.succeeded, true, "should have succeeded");
+    assert.equal(tr.warningIssues.length, 0, "should have no warnings");
+    assert.equal(tr.errorIssues.length, 0, "should have no errors");
+    assert.equal(
+      tr.stdout.indexOf("Rendered template") >= 0,
+      true,
+      "should display success message"
+    );
+    done();
+  });
 });
