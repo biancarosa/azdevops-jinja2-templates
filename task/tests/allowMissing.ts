@@ -14,11 +14,11 @@ let a: ma.TaskLibAnswers = <ma.TaskLibAnswers>{
     envtpl: "/usr/local/bin/envtpl",
   },
   exec: {
-    "/usr/local/bin/pip install envtpl --allow-missing": {
+    "/usr/local/bin/pip install envtpl": {
       code: 0,
       stdout: "",
     },
-    "/usr/local/bin/envtpl file.tmpl": {
+    "/usr/local/bin/envtpl file.tmpl --allow-missing": {
       code: 0,
       stdout: "",
     },

@@ -10,14 +10,14 @@ async function run() {
     });
 
     console.log("Install envtpl");
-    let args = ["install", "envtpl"];
+    await tl.tool(tl.which("pip")).arg(["install", "envtpl"]).exec();
+    console.log("Envtpl Installed");
+
+    let args = [file];
     if (allowMissing === true) {
       args.push("--allow-missing");
     }
-    await tl.tool(tl.which("pip")).arg(args).exec();
-    console.log("Envtpl Installed");
-
-    await tl.tool(tl.which("envtpl")).arg([file]).exec();
+    await tl.tool(tl.which("envtpl")).arg(args).exec();
     console.log("Rendered template");
   } catch (err) {
     tl.setResult(tl.TaskResult.Failed, err.message);
