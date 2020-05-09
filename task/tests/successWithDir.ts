@@ -16,11 +16,11 @@ let a: ma.TaskLibAnswers = <ma.TaskLibAnswers>{
       code: 0,
       stdout: "",
     },
-    "/usr/local/bin/envtpl file1.tpl": {
+    "/usr/local/bin/envtpl testDir/file1.tpl": {
       code: 0,
       stdout: "",
     },
-    "/usr/local/bin/envtpl file2.tpl": {
+    "/usr/local/bin/envtpl testDir/file2.tpl": {
       code: 0,
       stdout: "",
     },

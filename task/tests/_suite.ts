@@ -54,12 +54,12 @@ describe("Sample task tests", function () {
     assert.equal(tr.warningIssues.length, 0, "should have no warnings");
     assert.equal(tr.errorIssues.length, 0, "should have no errors");
     assert.equal(
-      tr.stdout.indexOf("Rendered template on file file1.tpl") >= 0,
+      tr.stdout.indexOf("Rendered template on file testDir/file1.tpl") >= 0,
       true,
       "should display success message"
     );
     assert.equal(
-      tr.stdout.indexOf("Rendered template on file file2.tpl") >= 0,
+      tr.stdout.indexOf("Rendered template on file testDir/file2.tpl") >= 0,
       true,
       "should display success message"
     );

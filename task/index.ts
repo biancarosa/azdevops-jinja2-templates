@@ -39,7 +39,8 @@ async function run() {
           console.log("Error getting directory information.")
         } else {
           files.forEach(function(file) {
-            renderFileTemplate(file, allowMissing)
+            let fullFilePath = `${dir}/${file}`;
+            renderFileTemplate(fullFilePath, allowMissing)
           })
         }
       }) 

@@ -9,7 +9,7 @@
   "author": "Bianca Rosa",
   "version": {
     "Major": 0,
-    "Minor": 2,
+    "Minor": 3,
     "Patch": 1
   },
   "instanceNameFormat": "Render Jinja2 Template in $(targetFile)",
