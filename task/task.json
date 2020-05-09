@@ -18,7 +18,7 @@
       "name": "file",
       "type": "string",
       "label": "Target file",
-      "defaultValue": "file.tmpl",
+      "defaultValue": "file.tpl",
       "required": false
     },
     {

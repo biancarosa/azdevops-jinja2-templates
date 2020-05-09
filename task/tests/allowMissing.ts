@@ -5,7 +5,7 @@ import path = require("path");
 let taskPath = path.join(__dirname, "..", "index.js");
 let tmr: tmrm.TaskMockRunner = new tmrm.TaskMockRunner(taskPath);
 
-tmr.setInput("file", "file.tmpl");
+tmr.setInput("file", "file.tpl");
 tmr.setInput("allowMissing", "true");
 
 let a: ma.TaskLibAnswers = <ma.TaskLibAnswers>{
@@ -18,7 +18,7 @@ let a: ma.TaskLibAnswers = <ma.TaskLibAnswers>{
       code: 0,
       stdout: "",
     },
-    "/usr/local/bin/envtpl file.tmpl --allow-missing": {
+    "/usr/local/bin/envtpl file.tpl --allow-missing": {
       code: 0,
       stdout: "",
     },
