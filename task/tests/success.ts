@@ -5,7 +5,7 @@ import path = require("path");
 let taskPath = path.join(__dirname, "..", "index.js");
 let tmr: tmrm.TaskMockRunner = new tmrm.TaskMockRunner(taskPath);
 
-tmr.setInput("file", "file.tmpl");
+tmr.setInput("file", "file.tpl");
 
 let a: ma.TaskLibAnswers = <ma.TaskLibAnswers>{
   which: {
@@ -17,7 +17,7 @@ let a: ma.TaskLibAnswers = <ma.TaskLibAnswers>{
       code: 0,
       stdout: "",
     },
-    "/usr/local/bin/envtpl file.tmpl": {
+    "/usr/local/bin/envtpl file.tpl": {
       code: 0,
       stdout: "",
     },

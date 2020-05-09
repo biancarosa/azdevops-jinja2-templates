@@ -18,14 +18,20 @@
       "name": "file",
       "type": "string",
       "label": "Target file",
-      "defaultValue": "file.tmpl",
-      "required": true
+      "defaultValue": "file.tpl",
+      "required": false
     },
     {
       "name": "allowMissing",
       "type": "boolean",
       "label": "Allow missing variables",
       "defaultValue": false,
+      "required": false
+    },
+    {
+      "name": "dir",
+      "type": "string",
+      "label": "Directory to replace templates on",
       "required": false
     }
   ],
