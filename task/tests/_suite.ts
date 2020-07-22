@@ -3,7 +3,7 @@ import * as assert from "assert";
 import * as ttm from "azure-pipelines-task-lib/mock-test";
 import fs = require("fs");
 
-describe("Sample task tests", function () {
+describe("Test suite for task", function () {
   before(function () { });
 
   after(() => { });
