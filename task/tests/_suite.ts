@@ -4,11 +4,11 @@ import * as ttm from "azure-pipelines-task-lib/mock-test";
 import fs = require("fs");
 
 describe("Sample task tests", function () {
-  before(function () {});
+  before(function () { });
 
-  after(() => {});
+  after(() => { });
 
-  it("it should fail if tool returns 1", function (done: MochaDone) {
+  it("it should fail if tool returns 1", function (done) {
     this.timeout(2000);
 
     let tp = path.join(__dirname, "failure.js");
@@ -22,7 +22,7 @@ describe("Sample task tests", function () {
 
     done();
   });
-  it("should succeed with simple inputs", function (done: MochaDone) {
+  it("should succeed with simple inputs", function (done) {
     this.timeout(1000);
 
     let tp = path.join(__dirname, "success.js");
@@ -39,7 +39,7 @@ describe("Sample task tests", function () {
     );
     done();
   });
-  it("should succeed with dir inputs", function (done: MochaDone) {
+  it("should succeed with dir inputs", function (done) {
     this.timeout(1000);
 
     let tp = path.join(__dirname, "successWithDir.js");
@@ -69,7 +69,7 @@ describe("Sample task tests", function () {
     fs.rmdirSync("testDir");
     done();
   });
-  it("should succeed with allow missing", function (done: MochaDone) {
+  it("should succeed with allow missing", function (done) {
     this.timeout(1000);
 
     let tp = path.join(__dirname, "allowMissing.js");
